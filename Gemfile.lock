@@ -1,0 +1,17 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    dotenv (2.7.4)
+    mini_portile2 (2.4.0)
+    nokogiri (1.10.3)
+      mini_portile2 (~> 2.4.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  dotenv
+  nokogiri
+
+BUNDLED WITH
+   1.17.3
