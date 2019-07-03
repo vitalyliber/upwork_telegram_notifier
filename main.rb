@@ -3,6 +3,7 @@ require 'rss'
 require 'open-uri'
 require 'nokogiri'
 
+time_interval = 15
 @instagram_api_token = ENV.fetch("INSTAGRAM_API_TOKEN")
 
 @checked = {}
@@ -41,6 +42,6 @@ end
 while true
   channels.each do |channel|
     check_rss(channel)
-    sleep 5
+    sleep time_interval
   end
 end
