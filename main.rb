@@ -2,6 +2,11 @@ require 'dotenv/load'
 require 'rss'
 require 'open-uri'
 require 'nokogiri'
+require 'logger'
+
+@logger = Logger.new(STDOUT)
+@logger.level = Logger::WARN
+@logger.info("Program started")
 
 time_interval = 15
 @instagram_api_token = ENV.fetch("INSTAGRAM_API_TOKEN")
@@ -23,10 +28,10 @@ channels = [
 def check_rss(channel)
   rss = open(channel[:url])
   feed = RSS::Parser.parse(rss)
-  puts "Title: #{feed.channel.title}"
+  @logger.info("Title: #{feed.channel.title}")
   item = feed.items.last
   unless @checked[item.link]
-    puts "Item: #{item.title}"
+    @logger.info("Item: #{item.title}")
     @checked[item.link] = true
     if channel[:cold_start]
       return channel[:cold_start] = false
