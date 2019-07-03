@@ -16,7 +16,7 @@ channels = [
     {
         url: 'https://www.upwork.com/ab/feed/jobs/rss?contractor_tier=2%2C3&proposals=0-4&q=ruby+on+rails&sort=recency&job_type=hourly&pa',
         channel: 'upwork_ror_notifier',
-        cold_start: true,
+        cold_start: false,
     },
     {
         url: 'https://www.upwork.com/ab/feed/jobs/rss?proposals=0-4&q=react+native&sort=recency&job_type=hourly&paging=0%3B10&api_params=',
