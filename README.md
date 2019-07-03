@@ -14,7 +14,7 @@ Set environment variables vis .env file or globally
 INSTAGRAM_API_TOKEN=xxx:xxx
 ```
 
-Run notifier
+Run the UpWork notifier
 
 ```
 ruby main.rb
