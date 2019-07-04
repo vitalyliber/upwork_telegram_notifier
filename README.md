@@ -8,7 +8,7 @@ Install dependencies
 bundle install
 ```
 
-Set environment variables vis .env file or globally
+Set environment variables in the .env file or globally
 
 ```
 INSTAGRAM_API_TOKEN=xxx:xxx
