@@ -1,5 +1,7 @@
 # UpWork Instagram notifier
 
+Get notifications for new Upwork jobs right into your Telegram with UpWork Telegram Notifier! 
+
 ## Getting Started
 
 Install dependencies
@@ -7,6 +9,8 @@ Install dependencies
 ```
 bundle install
 ```
+
+Get the rss link from [UpWork](https://www.upwork.com/o/jobs/browse/?sort=recency)
 
 Set environment variables in the .env file or globally
 
@@ -28,3 +32,9 @@ ruby main.rb
 - Create a Telegram BOT via BotFather
 - Set the bot as administrator in your channel
 - Set the bot api token to environment variable `TELEGRAM_API_TOKEN`
+
+## Examples
+
+[Ruby on Rails](https://t.me/upwork_ror_notifier)
+
+[React Native](https://t.me/upwork_rn_notifier)
