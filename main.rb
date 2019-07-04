@@ -30,7 +30,7 @@ def check_rss(channel)
   rss = open(channel[:url])
   feed = RSS::Parser.parse(rss)
   @logger.info("Title: #{feed.channel.title}")
-  p "Title: #{feed.channel.title}"
+  # p "Title: #{feed.channel.title}"
   item = feed.items.first
   unless @checked[item.link]
     @logger.info("Item: #{item.title}")
