@@ -2,11 +2,7 @@ require 'dotenv/load'
 require 'rss'
 require 'open-uri'
 require 'nokogiri'
-require 'logger'
 
-@logger = Logger.new(STDOUT)
-@logger.level = Logger::WARN
-@logger.info("Program started")
 p "Program started"
 
 time_interval = 15
@@ -29,11 +25,9 @@ channels = [
 def check_rss(channel)
   rss = open(channel[:url])
   feed = RSS::Parser.parse(rss)
-  @logger.info("Title: #{feed.channel.title}")
-  # p "Title: #{feed.channel.title}"
+  p "Title: #{feed.channel.title}"
   item = feed.items.first
   unless @checked[item.link]
-    @logger.info("Item: #{item.title}")
     p "Item: #{item.title}"
     @checked[item.link] = true
     if channel[:cold_start]

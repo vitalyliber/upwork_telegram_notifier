@@ -7,4 +7,3 @@ ruby '2.6.3'
 
 gem "nokogiri"
 gem "dotenv"
-gem 'logger'
